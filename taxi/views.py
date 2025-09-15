@@ -25,13 +25,13 @@ class CarDetailView(DetailView):
 
 
 class DriverListView(ListView):
-    model = User
+    model = Driver
     paginate_by = 5
 
 
 class DriverDetailView(DetailView):
-    model = User
-    queryset = User.objects.prefetch_related("cars__manufacturer")
+    model = Driver
+    queryset = Driver.objects.prefetch_related('cars__manufacturer')
 
 
 def index(request):
