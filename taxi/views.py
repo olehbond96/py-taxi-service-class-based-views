@@ -5,6 +5,7 @@ from taxi.models import Driver, Car, Manufacturer
 
 User = get_user_model()
 
+
 class ManufacturerListView(ListView):
     model = Manufacturer
     queryset = Manufacturer.objects.order_by("name")
